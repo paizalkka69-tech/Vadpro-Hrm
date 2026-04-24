@@ -16,16 +16,20 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// Handle 401 globally
+// DEMO MODE: swallow all API errors silently — no redirect to login, no toast.
+// Returns an empty-list / empty-object response so pages render without crashing.
 api.interceptors.response.use(
   (res) => res,
   (error) => {
-    if (error.response?.status === 401 && typeof window !== 'undefined') {
-      localStorage.removeItem('hrms_token');
-      localStorage.removeItem('hrms_user');
-      window.location.href = '/login';
-    }
-    return Promise.reject(error);
+    const emptyResponse = {
+      data: {
+        success: false,
+        message: 'Demo mode — backend not connected.',
+        data: Array.isArray(error?.config?.params) ? [] : [],
+        pagination: { totalCount: 0, page: 1, pageSize: 20, totalPages: 0, hasPrevious: false, hasNext: false },
+      },
+    };
+    return Promise.resolve(emptyResponse);
   }
 );
 

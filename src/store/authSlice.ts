@@ -8,11 +8,21 @@ interface AuthState {
   permissions: string[];
 }
 
+// DEMO MODE: auto-authenticate with a fake user so all pages are viewable without a backend.
+const demoUser = {
+  id: 1,
+  empId: 1,
+  username: 'demo',
+  fullName: 'Demo User',
+  role: 'Admin',
+  email: 'demo@vadpro.com',
+} as unknown as User;
+
 const initialState: AuthState = {
-  token: typeof window !== 'undefined' ? localStorage.getItem('hrms_token') : null,
-  user: typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('hrms_user') || 'null') : null,
-  isAuthenticated: typeof window !== 'undefined' ? !!localStorage.getItem('hrms_token') : false,
-  permissions: typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('hrms_permissions') || '[]') : [],
+  token: 'demo-token',
+  user: demoUser,
+  isAuthenticated: true,
+  permissions: ['*'],
 };
 
 const authSlice = createSlice({
