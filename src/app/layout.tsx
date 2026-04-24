@@ -24,8 +24,8 @@ const tajawal = Tajawal({
 });
 
 export const metadata: Metadata = {
-  title: 'VADPRO HRMS',
-  description: 'VADPRO Human Resource Management System',
+  title: 'MyDreams HRM',
+  description: 'MyDreams Human Resource Management System',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

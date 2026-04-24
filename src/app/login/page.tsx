@@ -51,7 +51,7 @@ export default function LoginPage() {
         <CardContent>
           <Box sx={{ textAlign: 'center', mb: 3 }}>
             <LockIcon sx={{ fontSize: 48, color: 'primary.main', mb: 1 }} />
-            <Typography variant="h5" fontWeight={700}>VADPRO HRMS</Typography>
+            <Typography variant="h5" fontWeight={700}>MyDreams HRM</Typography>
             <Typography variant="body2" color="text.secondary">Sign in to your account</Typography>
           </Box>
           {error && <Alert severity="error" sx={{ mb: 2 }}>{error}</Alert>}

@@ -1,6 +1,6 @@
 const en = {
   // Common
-  app: { name: 'VADPRO HRMS', subtitle: 'Human Resource Management System' },
+  app: { name: 'MyDreams HRM', subtitle: 'Human Resource Management System' },
   common: {
     save: 'Save', cancel: 'Cancel', delete: 'Delete', edit: 'Edit', add: 'Add',
     back: 'Back', search: 'Search', filter: 'Filter', export: 'Export',
@@ -15,7 +15,7 @@ const en = {
   // Auth
   auth: {
     login: 'Login', logout: 'Logout', username: 'Username', password: 'Password',
-    loginTitle: 'Sign In', loginSubtitle: 'Welcome to VADPRO HRMS',
+    loginTitle: 'Sign In', loginSubtitle: 'Welcome to MyDreams HRM',
     loginButton: 'Sign In', invalidCredentials: 'Invalid username or password',
   },
 

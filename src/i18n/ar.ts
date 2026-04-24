@@ -2,7 +2,7 @@ import type { Translations } from './en';
 
 const ar: Translations = {
   // Common
-  app: { name: 'فادبرو', subtitle: 'نظام إدارة الموارد البشرية' },
+  app: { name: 'أحلامي', subtitle: 'نظام إدارة الموارد البشرية' },
   common: {
     save: 'حفظ', cancel: 'إلغاء', delete: 'حذف', edit: 'تعديل', add: 'إضافة',
     back: 'رجوع', search: 'بحث', filter: 'تصفية', export: 'تصدير',
@@ -17,7 +17,7 @@ const ar: Translations = {
   // Auth
   auth: {
     login: 'تسجيل الدخول', logout: 'تسجيل الخروج', username: 'اسم المستخدم', password: 'كلمة المرور',
-    loginTitle: 'تسجيل الدخول', loginSubtitle: 'مرحباً بك في نظام فادبرو للموارد البشرية',
+    loginTitle: 'تسجيل الدخول', loginSubtitle: 'مرحباً بك في نظام أحلامي للموارد البشرية',
     loginButton: 'دخول', invalidCredentials: 'اسم المستخدم أو كلمة المرور غير صحيحة',
   },
 

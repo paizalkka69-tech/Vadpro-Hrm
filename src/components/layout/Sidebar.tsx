@@ -257,11 +257,11 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
             fontFamily: 'var(--font-poppins), sans-serif',
           }}
         >
-          V
+          M
         </Avatar>
         <Box>
           <Typography sx={{ color: '#FFFFFF', fontWeight: 800, fontSize: '1.05rem', lineHeight: 1.1, letterSpacing: '0.02em', fontFamily: 'var(--font-poppins), sans-serif' }}>
-            {t.app.name || 'VADPRO'}
+            {t.app.name || 'MyDreams'}
           </Typography>
           <Typography sx={{ color: vadproColors.sidebarText, fontSize: '0.72rem', fontWeight: 500, opacity: 0.85, mt: 0.2 }}>
             HR Management
