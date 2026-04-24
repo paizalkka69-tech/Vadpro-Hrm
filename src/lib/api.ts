@@ -27,10 +27,45 @@ const EMPLOYEES = [
   { id: 8, empCode: 'E-1008', nameEn: 'Sunil Nair', nameAr: 'سونيل ناير', gender: 'M', nationality: 'Indian', nationalityName: 'Indian', departmentName: 'Sales', designationName: 'Sales Manager', branchName: 'Dammam', gradeName: 'G5', statusId: 1, statusName: 'Active', email: 'sunil@vadpro.com', mobile: '+966 508 444 333', basicSalary: 13500, totalSalary: 17800, doj: '2018-05-08', dob: '1985-06-30' },
 ];
 
-const BRANCHES    = [{ id: 1, name: 'Riyadh HO' }, { id: 2, name: 'Jeddah' }, { id: 3, name: 'Dammam' }];
-const DEPARTMENTS = [{ id: 1, name: 'Finance' }, { id: 2, name: 'HR' }, { id: 3, name: 'IT' }, { id: 4, name: 'Sales' }, { id: 5, name: 'Operations' }];
-const DESIGNATIONS= [{ id: 1, name: 'Accountant' }, { id: 2, name: 'HR Manager' }, { id: 3, name: 'Senior Developer' }, { id: 4, name: 'Sales Executive' }, { id: 5, name: 'UI/UX Designer' }, { id: 6, name: 'Warehouse Supervisor' }, { id: 7, name: 'Senior Accountant' }, { id: 8, name: 'Sales Manager' }];
-const GRADES      = [{ id: 1, name: 'G1' }, { id: 2, name: 'G2' }, { id: 3, name: 'G3' }, { id: 4, name: 'G4' }, { id: 5, name: 'G5' }];
+const BRANCHES    = [
+  { id: 1, branchCode: 'B01', nameEn: 'Riyadh HO', nameAr: 'الرياض', isActive: true },
+  { id: 2, branchCode: 'B02', nameEn: 'Jeddah', nameAr: 'جدة', isActive: true },
+  { id: 3, branchCode: 'B03', nameEn: 'Dammam', nameAr: 'الدمام', isActive: true },
+];
+const DEPARTMENTS = [
+  { id: 1, deptCode: 'D01', nameEn: 'Finance', nameAr: 'المالية', isActive: true },
+  { id: 2, deptCode: 'D02', nameEn: 'HR', nameAr: 'الموارد البشرية', isActive: true },
+  { id: 3, deptCode: 'D03', nameEn: 'IT', nameAr: 'تقنية المعلومات', isActive: true },
+  { id: 4, deptCode: 'D04', nameEn: 'Sales', nameAr: 'المبيعات', isActive: true },
+  { id: 5, deptCode: 'D05', nameEn: 'Operations', nameAr: 'العمليات', isActive: true },
+];
+const DESIGNATIONS= [
+  { id: 1, desigCode: 'DG01', nameEn: 'Accountant', nameAr: 'محاسب', isActive: true },
+  { id: 2, desigCode: 'DG02', nameEn: 'HR Manager', nameAr: 'مدير الموارد البشرية', isActive: true },
+  { id: 3, desigCode: 'DG03', nameEn: 'Senior Developer', nameAr: 'مطور أول', isActive: true },
+  { id: 4, desigCode: 'DG04', nameEn: 'Sales Executive', nameAr: 'تنفيذي مبيعات', isActive: true },
+  { id: 5, desigCode: 'DG05', nameEn: 'UI/UX Designer', nameAr: 'مصمم واجهات', isActive: true },
+  { id: 6, desigCode: 'DG06', nameEn: 'Warehouse Supervisor', nameAr: 'مشرف مستودع', isActive: true },
+  { id: 7, desigCode: 'DG07', nameEn: 'Senior Accountant', nameAr: 'محاسب أول', isActive: true },
+  { id: 8, desigCode: 'DG08', nameEn: 'Sales Manager', nameAr: 'مدير مبيعات', isActive: true },
+];
+const GRADES      = [
+  { id: 1, gradeCode: 'G1', nameEn: 'Grade 1', nameAr: 'الدرجة 1', isActive: true },
+  { id: 2, gradeCode: 'G2', nameEn: 'Grade 2', nameAr: 'الدرجة 2', isActive: true },
+  { id: 3, gradeCode: 'G3', nameEn: 'Grade 3', nameAr: 'الدرجة 3', isActive: true },
+  { id: 4, gradeCode: 'G4', nameEn: 'Grade 4', nameAr: 'الدرجة 4', isActive: true },
+  { id: 5, gradeCode: 'G5', nameEn: 'Grade 5', nameAr: 'الدرجة 5', isActive: true },
+];
+const SECTIONS    = [
+  { id: 1, sectionCode: 'S01', nameEn: 'Accounts Receivable', nameAr: 'الذمم المدينة', isActive: true },
+  { id: 2, sectionCode: 'S02', nameEn: 'Accounts Payable', nameAr: 'الذمم الدائنة', isActive: true },
+  { id: 3, sectionCode: 'S03', nameEn: 'Recruitment', nameAr: 'التوظيف', isActive: true },
+];
+const CATEGORIES  = [
+  { id: 1, categoryCode: 'C01', nameEn: 'Full-time', nameAr: 'دوام كامل', isActive: true },
+  { id: 2, categoryCode: 'C02', nameEn: 'Part-time', nameAr: 'دوام جزئي', isActive: true },
+  { id: 3, categoryCode: 'C03', nameEn: 'Contract', nameAr: 'عقد', isActive: true },
+];
 const NATIONS     = [{ id: 1, name: 'Saudi' }, { id: 2, name: 'Indian' }, { id: 3, name: 'Egyptian' }, { id: 4, name: 'Pakistani' }, { id: 5, name: 'Filipino' }];
 const LEAVE_TYPES = [{ id: 1, name: 'Annual' }, { id: 2, name: 'Sick' }, { id: 3, name: 'Emergency' }, { id: 4, name: 'Hajj' }, { id: 5, name: 'Maternity' }];
 
@@ -88,6 +123,8 @@ const mockData = (url: string): unknown => {
   if (u.includes('/lookups/departments') || u.includes('/organization/departments')) return DEPARTMENTS;
   if (u.includes('/lookups/designations') || u.includes('/organization/designations')) return DESIGNATIONS;
   if (u.includes('/lookups/grades') || u.includes('/organization/grades')) return GRADES;
+  if (u.includes('/organization/sections')) return SECTIONS;
+  if (u.includes('/organization/categories')) return CATEGORIES;
   if (u.includes('/lookups/nationalities')) return NATIONS;
   if (u.includes('/lookups/leave') || u.includes('/leave/policies')) return LEAVE_TYPES;
   if (u.includes('/attendances')) return ATTENDANCE;
